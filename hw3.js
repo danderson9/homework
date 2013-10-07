@@ -21,7 +21,7 @@
 // 5 minus 5
 // 5 times 5
 // 5 divided by 5
-console.log(5+5, 5-5, 5*5, 5/5);
+console.log(5 + 5, 5 - 5, 5 * 5, 5 / 5); // JG: Always put spaces around your operators
 
 
 // Problem 2
@@ -45,16 +45,17 @@ console.log(5+5, 5-5, 5*5, 5/5);
 var cookieThief = 'Mom';
 
 function whoStole(cookieThief) {
-	if(cookieThief === 'Dad') {
-		return(("He's going to be in trouble!"));
+	if (cookieThief === 'Dad') { //JG: Put spaces after "if" and "else"
+		return "He's going to be in trouble!"; // JG: parentheses aren't required around return values
 	} else if (cookieThief === 'Mom') {
-		return(("No big deal."));
-	} else if(cookieThief === 'Me') {
-		return(("No more cookies for you."));
-} else {
-		return(("Johnny did it."));
+		return "No big deal.";
+	} else if (cookieThief === 'Me') {
+		return "No more cookies for you.";
+	} else {
+		return "Johnny did it.";
 	}
 }
+
 console.log(whoStole('Yous'));
 
 // Problem 3
@@ -73,7 +74,7 @@ console.log(whoStole('Yous'));
 var day = 'Thursday';
 var time = '6:30 PM';
 var room = 'HU 317';
-if(day==='Thursday' && time==='6:30 PM' && room==='HU 317') {
+if (day === 'Thursday' && time === '6:30 PM' && room === 'HU 317') {
 	console.log('You are in CA 276');
 } else {
 	console.log('You are in another class');
@@ -96,17 +97,22 @@ if(day==='Thursday' && time==='6:30 PM' && room==='HU 317') {
 // console.log(bartSimpson);
 var bartSimpson = '';
 var j = 0;
+
 while (j < 10) {
-	bartSimpson += ('I will not make fun of the teacher using JavaScript code. ');
-	j++;
+	bartSimpson += 'I will not make fun of the teacher using JavaScript code. ';
+	j += 1;
 }
+
 console.log(bartSimpson);
 
 // Problem 5
 // Do the same as you did in question 4 but write it as a for loop.
 
 var bartSimpson = '';
-for (var i = 0; i < 10; i++) {
-	bartSimpson += ('I will not make fun of the teacher using JavaScript code. ');
+var i;
+
+for (i = 0; i < 10; i += 1) { //JG: Starting off the loop with var i = 0 does not scope the varaible to the loop
+	bartSimpson += 'I will not make fun of the teacher using JavaScript code. ';
 }
+
 console.log(bartSimpson);

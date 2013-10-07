@@ -1,4 +1,4 @@
-/*
+Websc/*
 * Please follow the instructions carefully.
 *
 * When a problem says "send 'foo' to the console that means you would write
@@ -29,6 +29,7 @@ var email = 'danderson36@gmail.com',
 	bookPlusTax = 10 + (10 * .05),
 	switchOn = true,
 	supermanFly = false;
+
 console.log(email);
 console.log(major);
 console.log(favEditor);
@@ -41,8 +42,8 @@ console.log(supermanFly);
 // Problem 3) Use the typeof operator to determine the data type of each variable like so.
  console.log(typeof major);
  console.log(typeof PI);
- console.log(supermanFly);
-
+ console.log(supermanFly); // JG: This is missing typeof
+// JG: The rest of the typeof calls are missing
 
 
 // Problem 4) Create string variables to store the following string values.
@@ -54,7 +55,14 @@ console.log(link);
 console.log(jScript);
 
 // Problem 5) Create an array of topics you would like to learn this semester.
-var topicsToLearn = ["Calculations", "JQuery", "Info Validation", "Node.js introduction", "fade ins/outs", "Webscraping"];
+var topicsToLearn = [
+	"Calculations", 
+	"JQuery", 
+	"Info Validation", 
+	"Node.js introduction", 
+	"fade ins/outs", 
+	"Webscraping"
+];
 
 
 
