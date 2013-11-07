@@ -81,20 +81,22 @@
 		var numOfDaysInMarch = 31;
 		var knowJavaScript = false;
 		var bestFoodOfRockville = [
-		"The Bukhara", 
-		"The Cuban Corner", 
-		"Island Pride",
-		"Nick's Chop House"
+			"The Bukhara", 
+			"The Cuban Corner", 
+			"Island Pride",
+			"Nick's Chop House"
 		];
 		var expectedWebDeveloperSalary = 70000;
 		
 		// Problem 2
-		var salesTax = .25;
+		var salesTax = 0.25;
 		var drink = 20;
+		//JG: drink * 1.25
 		var drinkTotal = drink + (drink * salesTax);
 
-		var discount = .15;
+		var discount = 0.15;
 		var smartphone = 400;
+		//JG: smartphone * 0.85
 		var smartphoneTotal = smartphone - (smartphone * discount);
 
 		var subSandwich = 5;
@@ -104,6 +106,7 @@
 		var numOfPeople = 5;
 		var dinnerPerPerson = dinnerTotal / numOfPeople;
 
+		//JG: Looks good!
 		var multiplicationOfDecimals = (0.1 * 0.2).toFixed(2);
 		
 		// Problem 3
@@ -121,24 +124,33 @@
 			console.log("Not recognized");
 		}
 		
+		var i;
+
 		// Problem 4
-		for (var i = 5; i <= 15; i++) {
+		for (i = 5; i <= 15; i++) {
 			console.log(i);
 		}
+
 		// Problem 5
 		function average(num1, num2, num3) {
-		 	if (typeof num1  != "number" || typeof num2 != "number" || typeof num3 != "number") {
+		 	var sum;
+		 	var average;
+
+		 	if (typeof num1  !== "number" || typeof num2 !== "number" || typeof num3 !== "number") {
+		 		
 		 		return NaN;
 		 	} else {
-		 	var sum = num1 + num2 + num3;
-		 	var average = sum / 3;
-		 	return average;
-		 }
+		 		sum = num1 + num2 + num3;
+		 		average = sum / 3;
+		 		
+		 		return average;
+			}
 		}
 		
 		// Problem 6
-		var hardestPartOfJS = 
-		"The hardest part of learning JavaScript is syntax, since it is very different and much less strict than the Java I have been studying";
+		var hardestPartOfJS = "The hardest part of learning JavaScript is syntax, since it is very different and much less strict than the Java I have been studying";
+
+		//JG: I think you're doing great so far!
 	</script>
 
 </body>
