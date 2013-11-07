@@ -30,14 +30,19 @@ var athlete1 = {};
 athlete1.name = 'Joe Blow';
 athlete1.height = '6 ft';
 athlete1.age = '20';
-athlete1.country_of_origin = 'USA';
+//JG: Use camel case, not underscores.
+athlete1.countryOfOrigin = 'USA';
 athlete1.medals = ['Silver'];
-athlete1.Olympian = true;
-athlete1.introduce = function () {
-	console.log("Hello! My name is", athlete1.name, "and I am from", athlete1.country_of_origin);
+athlete1.isOlympian = true;
+athlete1.introduce = function() {
+	//JG: function should have a return statement, not console.log
+	//JG: I also padded the strings with spaces to make sure words were spread out.
+	//JG: I replaced the hardcoded reference to athlete1 and replace it with the keyword "this"
+	return "Hello! My name is " + this.name + " and I am from " + this.countryOfOrigin;
 }
-athlete1.addMedal = function (medalName) {
-	athlete1.medals += medalName;
+athlete1.addMedal = function(medalName) {
+	//JG: push() is the array method for appending values to the array. The += doesn't do the same thing.
+	this.medals.push(medalName);
 }
 // athlete.foo = "bar"
 // athlete.method = function () {
@@ -58,14 +63,14 @@ var athlete2 = {};
 athlete2['name'] = "Jane Who";
 athlete2['height'] = "5 ft";
 athlete2['age'] = "15";
-athlete2['country_of_origin'] = "Russia";
+athlete2['countryOfOrigin'] = "Russia";
 athlete2['medals'] = ["Bronze"];
-athlete2.Olympian = true;
-athlete2['introduce'] = function () {
-	console.log("Hello! My name is", athlete2.name, "and I am from", athlete2.country_of_origin);
+athlete2['isOlympian'] = true;
+athlete2['introduce'] = function() {
+	return "Hello! My name is " + this.name + " and I am from " + this.countryOfOrigin;
 }
-athlete2['addMedal'] = function (medalName) {
-	athlete2.medals += medalName;
+athlete2['addMedal'] = function(medalName) {
+	this.medals.push(medalName);
 }
 
 
@@ -75,21 +80,18 @@ athlete2['addMedal'] = function (medalName) {
 
 
 var athlete3 = {
-        name: 'John Doe',
-        height: '7 ft',
-        age: 25,
-        country_of_origin: 'Brazil',
-        medals: [],
-        Olympian: false,
-        introduce: function () {
-        	console.log("Hello! My name is", athlete3.name, "and I am from ",athlete3.country_of_origin);
-        },
-        addMedal: function (medalName) {
-        	athlete3.medals += medalName;
-        }
-
-
-
+	name: 'John Doe',
+	height: '7 ft',
+	age: 25,
+	countryOfOrigin: 'Brazil',
+	medals: [],
+	isOlympian: false,
+	introduce: function() {
+		return "Hello! My name is " + this.name + " and I am from " + this.countryOfOrigin;
+	},
+	addMedal: function(medalName) {
+		this.medals.push(medalName);
+	}
 };
 
 
@@ -97,20 +99,20 @@ var athlete3 = {
 // Problem 4
 // Create a prototype for athelete. See below for examples:
 // https://github.com/galdamez/ca276-fall2013/blob/master/week8/prototypes.html
-function Athlete(name, height, age, country_of_origin, medals, Olympian) {
+function Athlete(name, height, age, countryOfOrigin, medals, isOlympian) {
 	this.name = name;
 	this.height = height;
 	this.age = age;
-	this.country_of_origin = country_of_origin;
+	this.countryOfOrigin = countryOfOrigin;
 	this.medals = medals;
-	this.Olympian = Olympian;
+	this.isOlympian = isOlympian;
 
-	this.introduce = function () {
-		console.log("Hello! My name is", this.name, "and I am from", this.country_of_origin);
+	this.introduce = function() {
+		return "Hello! My name is " + this.name + " and I am from " + this.countryOfOrigin;
 	}
 
-	this.addMedal = function (medalName) {
-		this.medal += medalName;
+	this.addMedal = function(medalName) {
+		this.medals.push(medalName);
 	}
 }
 
@@ -145,8 +147,8 @@ function Athlete(name, height, age, country_of_origin, medals, Olympian) {
 function Sprinter(distance) {
 	this.distance = distance;
 
-	this.Hurdles = function() {
-		console.log("I can also run the", this.distance, "in hurdles");
+	this.hurdles = function() {
+		return "I can also run the" + this.distance + "in hurdles";
 	}
 }
 
