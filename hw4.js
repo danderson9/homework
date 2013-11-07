@@ -67,10 +67,10 @@ athlete2['countryOfOrigin'] = "Russia";
 athlete2['medals'] = ["Bronze"];
 athlete2['isOlympian'] = true;
 athlete2['introduce'] = function() {
-	return "Hello! My name is " + this.name + " and I am from " + this.countryOfOrigin;
+	return "Hello! My name is " + this['name'] + " and I am from " + this['countryOfOrigin'];
 }
 athlete2['addMedal'] = function(medalName) {
-	this.medals.push(medalName);
+	this['medals'].push(medalName);
 }
 
 
