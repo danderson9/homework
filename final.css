@@ -1,0 +1,39 @@
+<style type="text/css">
+			body { font-family: Helvetica, sans-serif; font-size: 14px; }
+			
+			br { clear: both; }
+			
+			form div, input, label, select, textarea { display: block; float: left; font-weight: normal; }
+			
+			form div label, form div input { float: none; display: inline; }
+			
+			form div, label + input, label + textarea, label + select, label + textarea { margin-bottom: 15px; }
+			
+			form div br { clear: none; }
+						
+			input, textarea { font: 12px Helvetica, Arial; color: DarkBlue; }
+			
+			input[type="text"] { width: 250px; }
+			
+			input[type="email"] { width: 175px; }
+			
+			input[type="radio"], input[type="checkbox"] { padding-right: 5px; }
+			
+			label { width: 100px; }
+			
+			a:visited { color: Blue; }
+			
+			textarea { display: inline; height: 75px; width: 225px; }
+			
+			#form_wrapper { border: 1px solid Gray; border-radius: 8px; margin: 0 auto; padding: 10px 15px; width: 500px; }
+			
+			.hidden { display: none; }
+			
+			.dialog { border-radius: 8px; font-size: 18px; font-weight: bold; padding: 8px 0; margin: 0 auto 16px auto; text-align: center; width: 80%; }
+			
+			.warning { background-color: LightPink; color: DarkRed; }
+			
+			.status { background-color: LightGreen; color: Teal; }
+			
+			#error { background-color: LightPink; border-radius: 4px; color: DarkRed; padding: 8px; }
+		</style>

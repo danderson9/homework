@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Event Registration</title>
+		<link rel="stylesheet" type="text/css" href="final.css">
+		
+	</head>
+	<body>
+		<div id="form_wrapper">
+			<form method="get" action="submission.html">
+				<label for="first_name">First name</label>
+				<input type="text" id="first_name" name="first_name"><br>
+				<label for="last_name">Last name</label>
+				<input type="text" id="last_name" name="last_name"><br>
+				<label id="birthday">Birthday</label>
+				<input type="date" name="birthday"><br>
+				<label for="email">Email</label>
+				<input type="email" name="email"><br>
+				<label for="experience">Experience Level</label>
+				<select id="expLev" name="experience">
+					<option value="">---Please select---</option>
+					<option value="Beginner">Beginner</option>
+					<option value="Intermediate">Intermediate</option>
+					<option value="Advanced">Advanced</option>
+				</select>
+				<br />
+				<label for="bio">Brief Bio</label>
+				<textarea id="bio"></textarea><br />
+				<label for="url">Personal Web Site</label>
+				<input type="url" name="url"><br>
+				<label for="hphone">Home Phone</label>
+				<input type="number" id="hphone" value=""><br>
+				<label for="mphone">Mobile Phone</label>
+				<input type="number" id="mphone" value=""><br>
+				<label for="meal">Meal Preference</label>
+				<div>
+					<label><input type="radio" id="meal" name="meal">À la carte</label><br>
+					<label><input type="radio" name="meal">Gluten Intolerant</label><br>
+					<label><input type="radio" name="meal">Kosher</label><br>
+					<label><input type="radio" name="meal">Jain</label><br>
+					<label><input type="radio" name="meal">Muslim</label><br>
+					<label><input type="radio" name="meal">Vegetarian</label><br>
+					<label><input type="radio" name="meal">Vegan</label><br>
+				</div>
+				<br>
+				<label for="skills">Skills</label>
+				<div>
+					<label><input type="checkbox" name="skillsC">HTML</label><br>
+					<label><input type="checkbox" name="skillsC">CSS</label><br>
+					<label><input type="checkbox" name="skillsC">JavaScript</label><br>
+					<label><input type="checkbox" name="skillsC">jQuery</label><br>
+					<label><input type="checkbox" name="skillsC">Dojo</label><br>
+					<label><input type="checkbox" name="skillsC">Prototype</label><br>
+					<label><input type="checkbox" name="skillsC">Flash</label><br>
+					<label><input type="checkbox" name="skillsC">Flex</label><br>
+				</div>
+				<br>
+				<label id="date">Expected Date of Arrival</label>
+				<input type="date" name="date"><br>
+				
+				<label>&nbsp;</label>
+				<div id="error" class="hidden"></div><br>
+				
+				<label>&nbsp;</label>
+				<input type="submit" value="Submit"><br>
+			</form>
+		</div>
+		<script src="final.js"></script>
+	</body>
+</html>
