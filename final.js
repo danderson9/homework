@@ -1,4 +1,3 @@
-
 var form = document.querySelector('form');
 			form.addEventListener('submit', function (e) {
 				var errors, i, errorDiv, namePattern, numCheck, urlCheck;
